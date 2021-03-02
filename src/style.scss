@@ -1,1 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
+
+$yellow-0: #fff7e5;
+
+.title-front {
+  background: linear-gradient(#6668, #bbb9);
+  position: absolute;
+}
+
+// own default classes
+.ml-- { margin: 0 -15px; }
+.bg-yll-1 { background-color: $yellow-0; }
+.ovr-hide { overflow: hidden; }
