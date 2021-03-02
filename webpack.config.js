@@ -8,17 +8,35 @@ module.exports = {
       {
         test: /\.s[ac]ss$/,
         use: [
-            'style-loader', // Creates 'style' nodes from JS strings
-            'css-loader', // Translates CSS into CommonJS
-            'sass-loader', // Compiles Sass to CSS
-          ],
-        },
-        {
-          test: /\.(png|svg|jpe?g|gif)$/,
-          use: ['file-loader'],
-        },
-      ],
-    },
+          {
+            loader: 'style-loader', // inject CSS to page
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS modules
+          },
+          {
+            loader: 'postcss-loader', // Run post css actions
+            options: {
+              postcssOptions:{
+              plugins: function () { // post css plugins, can be exported to postcss.config.js
+                return [
+                  require('precss'),
+                  require('autoprefixer')
+                ];
+              } }
+            }
+          },
+          {
+            loader: 'sass-loader' // compiles Sass to CSS
+          }
+        ],
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: ['file-loader'],
+      },
+    ],
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
