@@ -1,4 +1,4 @@
-## Rosys Kitchen Project
+# Rosys Kitchen Project
 
 ## Links
 [Github Repo](https://github.com/NewIncome/rosys-kitchen)
