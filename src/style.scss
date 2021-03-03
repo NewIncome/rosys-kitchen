@@ -7,6 +7,10 @@ $yellow-0: #fff7e5;
   position: absolute;
 }
 
+.carousel-caption {
+  background: linear-gradient(#6668, #bbb9);
+}
+
 // own default classes
 .ml-- { margin: 0 -15px; }
 .bg-yll-1 { background-color: $yellow-0; }
