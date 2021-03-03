@@ -11,11 +11,52 @@ $yellow-0: #fff7e5;
   background: linear-gradient(#6668, #bbb9);
 }
 
-@media (max-width: 768px) {
+.pizza {
+  color: #fff;
+  max-height: 50vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  .pizza-info {
+    position: absolute;
+    background: linear-gradient(#000b, #513a1d99);
+
+    .p-info-details {
+      border-radius: 30px;
+      color: #705029;
+      margin-left: auto;
+      margin: 0 auto 1rem;
+      text-align: initial;
+      width: 175px;
+    }
+  }
+
+  .pizza-img {
+    filter: brightness(90%) contrast(140%);
+    margin-top: -8%;
+  }
+}
+
+@media (min-width: 768px) { // and up
+  .pizza-info {
+    height: 100%;
+    top: 0;
+  }
+
+  .p-i-imp { right: 0; }
+}
+
+@media (max-width: 767px) { // and down
   .p-i-div {
     max-height: 60vh;
     overflow: hidden;
     .pizza-img { margin-top: -140px; }
+  }
+
+  .pizza-info {
+    bottom: 0;
+    width: 100%;
   }
 }
 
@@ -23,3 +64,8 @@ $yellow-0: #fff7e5;
 .ml-- { margin: 0 -15px; }
 .bg-yll-1 { background-color: $yellow-0; }
 .ovr-hide { overflow: hidden; }
+.flex-vert-cntr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
