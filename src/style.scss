@@ -11,6 +11,14 @@ $yellow-0: #fff7e5;
   background: linear-gradient(#6668, #bbb9);
 }
 
+@media (max-width: 768px) {
+  .p-i-div {
+    max-height: 60vh;
+    overflow: hidden;
+    .pizza-img { margin-top: -140px; }
+  }
+}
+
 // own default classes
 .ml-- { margin: 0 -15px; }
 .bg-yll-1 { background-color: $yellow-0; }
