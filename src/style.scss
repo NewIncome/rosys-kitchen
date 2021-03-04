@@ -2,13 +2,13 @@
 
 $yellow-0: #fff7e5;
 
-body {
+.body-bckgnd {
   background: url(assets/Titles-Bckgnd.jpg) no-repeat center center;
 }
 
-section > h2 {
-  color: #fff;
-}
+// section > h2 {
+//   color: #fff;
+// }
 
 .title-front {
   background: linear-gradient(#6668, #bbb9);
@@ -50,8 +50,46 @@ section > h2 {
   }
 }
 
+.promo {
+  .promo-img { width: 90%; }
+
+  .promo-text {
+    position: absolute;
+    width: 58%;
+  }
+}
+
+.footer {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Bootstrap's Media Queries
+  @media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+  @media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+  @media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+  @media (min-width: 1200px) { ... }   // Extra large devices (large desktops, 1200px and up)
+*/
+
 @media (max-width: 576px) { // and down
   .pizza-img { margin-left: -150px; }
+  .promo-text {
+    top: 30%;
+    left: 35%;
+
+    .promo-h { font-size: 5vw; }
+    .promo-p { font-size: 4.3vw; }
+  }
+}
+
+@media (min-width: 576px) { // and up
+  .promo-text {
+    top: 24%;
+    left: 30%;
+
+    .promo-h { font-size: 1.1rem; }
+    .promo-p { font-size: 1rem; }
+  }
 }
 
 @media (min-width: 768px) { // and up
@@ -63,6 +101,11 @@ section > h2 {
   }
 
   .p-i-imp { right: 0; }
+
+  .promo-text {
+    .promo-h { font-size: 1.5rem; }
+    .promo-p { font-size: 1.2rem; }
+  }
 }
 
 @media (max-width: 767px) { // and down
@@ -82,11 +125,14 @@ section > h2 {
 
 @media (min-width: 992px) { // and up
   .pizza-sp { width: 100%; }
+
+  .promo-text { top: 17%; }
 }
 
-// own default classes
+// Reusable classes
 .ml-- { margin: 0 -15px; }
 .bg-yll-1 { background-color: $yellow-0; }
+.txt-yll-1 { color: $yellow-0; }
 .ovr-hide { overflow: hidden; }
 .flex-vert-cntr {
   display: flex;
