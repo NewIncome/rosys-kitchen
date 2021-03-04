@@ -2,11 +2,22 @@
 
 $yellow-0: #fff7e5;
 
+body {
+  background: url(assets/Titles-Bckgnd.jpg) no-repeat center center;
+}
+
+section > h2 {
+  color: #fff;
+}
+
 .title-front {
   background: linear-gradient(#6668, #bbb9);
   position: absolute;
 }
 
+.carousel-item {
+  height: 50vw;
+}
 .carousel-caption {
   background: linear-gradient(#6668, #bbb9);
 }
@@ -38,7 +49,13 @@ $yellow-0: #fff7e5;
   }
 }
 
+@media (max-width: 576px) { // and down
+  .pizza-img { margin-left: -150px; }
+}
+
 @media (min-width: 768px) { // and up
+  .buñuelo-lg { margin-top: -388px; }
+
   .pizza-info {
     height: 100%;
     top: 0;
@@ -48,6 +65,8 @@ $yellow-0: #fff7e5;
 }
 
 @media (max-width: 767px) { // and down
+  .buñuelo-lg { margin-top: -180px; }
+
   .p-i-div {
     max-height: 60vh;
     overflow: hidden;
@@ -58,6 +77,10 @@ $yellow-0: #fff7e5;
     bottom: 0;
     width: 100%;
   }
+}
+
+@media (min-width: 992px) { // and up
+  .pizza-sp { width: 100%; }
 }
 
 // own default classes
