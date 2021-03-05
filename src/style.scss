@@ -1,7 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
 
 $yellow-0: #fff7e5;
 $yellow-1: #fbe9bf;
+$Logo-font-fam: 'Oi', cursive;
 
 .body-bckgnd {
   background: url(assets/Titles-Bckgnd.jpg) no-repeat center center;
@@ -71,6 +73,7 @@ $yellow-1: #fbe9bf;
   min-height: 50vh;
 }
 
+// Lookup icons, from https://feathericons.com/
 .feather {
   width: 24px;
   height: 24px;
@@ -100,6 +103,13 @@ $yellow-1: #fbe9bf;
   @media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
   @media (min-width: 1200px) { ... }   // Extra large devices (large desktops, 1200px and up)
 */
+
+h2 {
+  font-family: Archer,Georgia,Times New Roman,Times,serif;
+  font-weight: bold;
+}
+
+p, li, h6 { font-family: Calibre,Helvetica Neue,Helvetica,Arial,sans-serif; }
 
 @media (max-width: 576px) { // and down
   .promo-text {
@@ -156,12 +166,26 @@ $yellow-1: #fbe9bf;
   .promo-text { top: 17%; }
 }
 
+// Fixed Bootstrap classes
+.navbar-brand {
+  color: rgba(32, 14, 3, 0.9);
+
+  &:hover { color: #000 !important; }
+}
+
+.navbar-collapse {
+  background-color: #ffffffba;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
 // Reusable classes
 .ml-- { margin: 0 -15px; }
 .bg-yll-1 { background-color: $yellow-0; }
 .bg-yll-2 { background-color: $yellow-1; }
 .txt-yll-1 { color: $yellow-0; }
 .ovr-hide { overflow: hidden; }
+.font-logo { font-family: $Logo-font-fam;}
 .flex-vert-cntr {
   display: flex;
   flex-direction: column;
