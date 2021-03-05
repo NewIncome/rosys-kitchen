@@ -81,18 +81,17 @@ $yellow-1: #fbe9bf;
   fill: none;
 }
 
-.doc:hover {
-  fill: #fff;
-}
+.doc {
+  width: 35px;
+  height: 35px;
 
-.footer {}
+  .doc:hover { fill: #fff; }
+}
 
 .social {
   fill: rgb(114, 102, 102);
 
-  &:hover {
-    fill: $yellow-1;
-  }
+  &:hover { fill: $yellow-1; }
 }
 
 /* Bootstrap's Media Queries
