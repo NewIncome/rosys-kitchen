@@ -1,0 +1,216 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
+$yellow-0: #fff7e5;
+$yellow-1: #fbe9bf;
+$Logo-font-fam: 'Oi', cursive;
+
+.body-bckgnd {
+  background: url(assets/Titles-Bckgnd.jpg) repeat center center;
+}
+
+.main { background: linear-gradient(#fbe9bf, #fff7e5); }
+
+.main-h { word-wrap: break-word; }
+
+.title-front {
+  background: linear-gradient(#6668, #bbb9);
+  position: absolute;
+}
+
+.carousel-item {
+  height: 50vw;
+  min-height: 230px;
+}
+
+.carousel-caption {
+  background: linear-gradient(#6668, #bbb9);
+}
+
+.pizza {
+  color: #fff;
+  max-height: 50vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  .pizza-info {
+    position: absolute;
+    background: linear-gradient(#000b, #513a1d99);
+
+    .p-info-details {
+      border-radius: 30px;
+      color: #705029;
+      margin: 0 auto 1rem;
+      text-align: initial;
+      width: 220px;
+    }
+  }
+
+  .pizza-img {
+    filter: brightness(90%) contrast(140%);
+    margin-top: -8%;
+    width: 100%;
+  }
+}
+
+.promo {
+  background: radial-gradient(#fff7e5 58%, transparent 71%, transparent);
+
+  .promo-img { width: 90%; }
+
+  .promo-text {
+    position: absolute;
+    width: 58%;
+  }
+}
+
+.promo-ann {
+  background: linear-gradient(#6665, #bbb6, #6665);
+  font-weight: bold;
+  text-shadow: 2px 2px 1px #ffa;
+}
+
+#Contacto {
+  min-height: 35vh;
+}
+
+// Lookup icons, from https://feathericons.com/
+.feather {
+  width: 30px;
+  height: 30px;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.doc {
+  width: 45px;
+  height: 45px;
+
+  .doc:hover { fill: #fff; }
+}
+
+.social {
+  fill: rgb(114, 102, 102);
+
+  &:hover { fill: $yellow-1; }
+}
+
+/* Bootstrap's Media Queries
+  @media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+  @media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+  @media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+  @media (min-width: 1200px) { ... }   // Extra large devices (large desktops, 1200px and up)
+*/
+
+h2 {
+  font-family: Archer, Georgia, Times New Roman, Times, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+p,
+li,
+h6 {
+  font-family: Calibre, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+}
+
+@media (max-width: 576px) { // and down
+  .promo-text {
+    top: 30%;
+    left: 35%;
+
+    .promo-h { font-size: 5vw; }
+    .promo-p { font-size: 4.3vw; }
+  }
+}
+
+@media (min-width: 576px) { // and up
+  .promo-text {
+    top: 24%;
+    left: 30%;
+
+    .promo-h { font-size: 1.1rem; }
+    .promo-p { font-size: 1rem; }
+  }
+}
+
+@media (min-width: 768px) { // and up
+  .buñuelo-lg { margin-top: -388px; }
+
+  .pizza-info {
+    height: 100%;
+    top: 0;
+  }
+
+  .p-i-imp { right: 0; }
+
+  .promo-text {
+    .promo-h { font-size: 1.5rem; }
+    .promo-p { font-size: 1.2rem; }
+  }
+}
+
+@media (max-width: 767px) { // and down
+  .buñuelo-lg { margin-top: -180px; }
+
+  .p-i-div {
+    max-height: 60vh;
+    overflow: hidden;
+    .pizza-img { margin-top: -140px; }
+  }
+
+  .pizza-info {
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) { // and up
+  .promo-text { top: 17%; }
+}
+
+@media (min-width: 1200px) { // and up
+  .promo-h { font-size: 2.2vw !important; }
+  .promo-p { font-size: 2vw !important; }
+}
+
+@media (min-width: 1400px) { // and up
+  #Buñuelos {
+    width: 85% !important;
+    max-width: 100%;
+  }
+}
+
+// Fixed Bootstrap classes
+.navbar-brand {
+  color: rgba(32, 14, 3, 0.9);
+
+  &:hover { color: #000 !important; }
+}
+
+@media (max-width: 992px) { // and up
+  .navbar-collapse {
+    background-color: #ffffffba;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+}
+
+// Reusable classes
+.ml-- { margin: 0 -15px; }
+.bg-yll-1 { background-color: $yellow-0; }
+.bg-yll-2 { background-color: $yellow-1; }
+.txt-yll-1 { color: $yellow-0; }
+.ovr-hide { overflow: hidden; }
+.font-logo { font-family: $Logo-font-fam; }
+
+.flex-vert-cntr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

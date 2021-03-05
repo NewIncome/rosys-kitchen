@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "server": "webpack serve",
+    "eslint": "npx eslint .",
+    "eslint-fix": "npx eslint . --fix",
+    "stylelint": "npx stylelint **/*.{css,scss}",
+    "stylelint-fix": "npx stylelint **/*.{css,scss} --fix"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +22,8 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.2.0",
+    "postcss-loader": "^5.0.0",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
@@ -29,6 +36,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0"
+    "autoprefixer": "^10.2.5",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
