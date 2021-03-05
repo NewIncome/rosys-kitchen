@@ -67,13 +67,32 @@ $yellow-1: #fbe9bf;
   text-shadow: 2px 2px 1px #ffa;
 }
 
-.footer {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+#Contacto {
+  min-height: 50vh;
 }
 
-#Contacto {
-  height: 50vh;
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.doc:hover {
+  fill: #fff;
+}
+
+.footer {}
+
+.social {
+  fill: rgb(114, 102, 102);
+
+  &:hover {
+    fill: $yellow-1;
+  }
 }
 
 /* Bootstrap's Media Queries
