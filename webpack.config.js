@@ -1,3 +1,4 @@
+/* eslint-disable global-require, import/no-unresolved */
 const path = require('path');
 
 module.exports = {
@@ -17,18 +18,19 @@ module.exports = {
           {
             loader: 'postcss-loader', // Run post css actions
             options: {
-              postcssOptions:{
-              plugins: function () { // post css plugins, can be exported to postcss.config.js
-                return [
-                  require('precss'),
-                  require('autoprefixer')
-                ];
-              } }
-            }
+              postcssOptions: {
+                plugins() { // post css plugins, can be exported to postcss.config.js
+                  return [
+                    require('precss'),
+                    require('autoprefixer'),
+                  ];
+                },
+              },
+            },
           },
           {
-            loader: 'sass-loader' // compiles Sass to CSS
-          }
+            loader: 'sass-loader', // compiles Sass to CSS
+          },
         ],
       },
       {

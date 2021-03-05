@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "server": "webpack serve"
+    "server": "webpack serve",
+    "eslint": "npx eslint .",
+    "eslint-fix": "npx eslint . --fix",
+    "stylelint": "npx stylelint **/*.{css,scss}",
+    "stylelint-fix": "npx stylelint **/*.{css,scss} --fix"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +36,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.5",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"

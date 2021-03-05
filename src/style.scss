@@ -6,10 +6,12 @@ $yellow-1: #fbe9bf;
 $Logo-font-fam: 'Oi', cursive;
 
 .body-bckgnd {
-  background: url(assets/Titles-Bckgnd.jpg) no-repeat center center;
+  background: url(assets/Titles-Bckgnd.jpg) repeat center center;
 }
 
 .main { background: linear-gradient(#fbe9bf, #fff7e5); }
+
+.main-h { word-wrap: break-word; }
 
 .title-front {
   background: linear-gradient(#6668, #bbb9);
@@ -20,6 +22,7 @@ $Logo-font-fam: 'Oi', cursive;
   height: 50vw;
   min-height: 230px;
 }
+
 .carousel-caption {
   background: linear-gradient(#6668, #bbb9);
 }
@@ -38,10 +41,9 @@ $Logo-font-fam: 'Oi', cursive;
     .p-info-details {
       border-radius: 30px;
       color: #705029;
-      margin-left: auto;
       margin: 0 auto 1rem;
       text-align: initial;
-      width: 175px;
+      width: 220px;
     }
   }
 
@@ -64,19 +66,19 @@ $Logo-font-fam: 'Oi', cursive;
 }
 
 .promo-ann {
-  background: linear-gradient(#6665, #bbb6,#6665);
+  background: linear-gradient(#6665, #bbb6, #6665);
   font-weight: bold;
   text-shadow: 2px 2px 1px #ffa;
 }
 
 #Contacto {
-  min-height: 50vh;
+  min-height: 35vh;
 }
 
 // Lookup icons, from https://feathericons.com/
 .feather {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   stroke: #000;
   stroke-width: 2;
   stroke-linecap: round;
@@ -85,8 +87,8 @@ $Logo-font-fam: 'Oi', cursive;
 }
 
 .doc {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
 
   .doc:hover { fill: #fff; }
 }
@@ -105,11 +107,17 @@ $Logo-font-fam: 'Oi', cursive;
 */
 
 h2 {
-  font-family: Archer,Georgia,Times New Roman,Times,serif;
+  font-family: Archer, Georgia, Times New Roman, Times, serif;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
-p, li, h6 { font-family: Calibre,Helvetica Neue,Helvetica,Arial,sans-serif; }
+p,
+li,
+h6 {
+  font-family: Calibre, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+}
 
 @media (max-width: 576px) { // and down
   .promo-text {
@@ -166,6 +174,18 @@ p, li, h6 { font-family: Calibre,Helvetica Neue,Helvetica,Arial,sans-serif; }
   .promo-text { top: 17%; }
 }
 
+@media (min-width: 1200px) { // and up
+  .promo-h { font-size: 2.2vw !important; }
+  .promo-p { font-size: 2vw !important; }
+}
+
+@media (min-width: 1400px) { // and up
+  #Buñuelos {
+    width: 85% !important;
+    max-width: 100%;
+  }
+}
+
 // Fixed Bootstrap classes
 .navbar-brand {
   color: rgba(32, 14, 3, 0.9);
@@ -173,10 +193,12 @@ p, li, h6 { font-family: Calibre,Helvetica Neue,Helvetica,Arial,sans-serif; }
   &:hover { color: #000 !important; }
 }
 
-.navbar-collapse {
-  background-color: #ffffffba;
-  border-radius: 10px;
-  padding-left: 20px;
+@media (max-width: 992px) { // and up
+  .navbar-collapse {
+    background-color: #ffffffba;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
 }
 
 // Reusable classes
@@ -185,7 +207,8 @@ p, li, h6 { font-family: Calibre,Helvetica Neue,Helvetica,Arial,sans-serif; }
 .bg-yll-2 { background-color: $yellow-1; }
 .txt-yll-1 { color: $yellow-0; }
 .ovr-hide { overflow: hidden; }
-.font-logo { font-family: $Logo-font-fam;}
+.font-logo { font-family: $Logo-font-fam; }
+
 .flex-vert-cntr {
   display: flex;
   flex-direction: column;
